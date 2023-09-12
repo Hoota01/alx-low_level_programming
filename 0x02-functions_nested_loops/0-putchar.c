@@ -5,16 +5,16 @@
  *
  * Return: Always 0.
  */
-int main()
+int main(void)
 {
 
-	printf('m');
-	printf('a');
-	printf('h');
-	printf('m');
-	printf('o');
-	printf('u');
-	printf('d');
-	printf('\n');
+	_putchar('m');
+	_putchar('a');
+	_putchar('h');
+	_putchar('m');
+	_putchar('o');
+	_putchar('u');
+	_putchar('d');
+	_putchar('\n');
 	return 0;
 	}

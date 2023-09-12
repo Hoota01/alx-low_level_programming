@@ -8,6 +8,13 @@
 int main()
 {
 
-	printf("_putchar\n");
+	printf('m');
+	printf('a');
+	printf('h');
+	printf('m');
+	printf('o');
+	printf('u');
+	printf('d');
+	printf('\n');
 	return 0;
 	}

@@ -1,44 +1,45 @@
 #include <stdio.h>
 /**
- * print_fib - prints the first 50 Fibonacci numbers,
- * starting with 1 and 2, followed by a new line.
- * @len: the length of with the fib sequance should print to.
- *
- * Return: void
- */
-void print_fib(int len)
-{
-	unsigned int target, i;
-
-	unsigned int former_l, former_r,;
-	unsigned int latter_l, latter_r;
-	unsigned int fib_l, fib_r;
-
-	f = 1;
-	l = 2;
-	target = len - 2;
-	for (i = 0 ; i < target ; i++)
-	{
-		fib = f + l;
-		printf("%d : ", i + 4);
-		printf("%.0Lf" , fib);
-		f = l;
-		l = fib;
-		if (i < target - 1)
-			printf("\n");
-	}
-	putchar('\n');
-}
-
-
-/**
- * main - Entry point,
- *
- *
- * Return: Always 0 (sucess)
- */
+*main - prints out first 98
+*fibonacci suit numbers
+*Return: return 0
+*/
 int main(void)
 {
-	print_fib(98);
-	return (0);
+int inc;
+unsigned long n1 = 0, n2 = 1, n3;
+unsigned long n1_h1, n1_h2, n2_h1, n2_h2;
+unsigned long h1, h2;
+
+for (inc = 0; inc < 92; inc++)
+{
+n3 = n1 + n2;
+printf("%lu, ", n3);
+n1 = n2;
+n2 = n3;
+}
+n1_h1 = n1 / 10000000000;
+n2_h1 = n2 / 10000000000;
+n1_h2 = n1 % 10000000000;
+n2_h2 = n2 % 10000000000;
+for (inc = 93; inc < 99; inc++)
+{
+h1 = n1_h1 + n2_h1;
+h2 = n1_h2 + n2_h2;
+if ((n1_h2 + n2_h2) > 9999999999)
+{
+h1 += 1;
+h2 %= 10000000000;
+}
+printf("%lu%lu", h1, h2);
+if (inc != 98)
+printf(", ");
+
+n1_h1 = n2_h1;
+n1_h2 = n2_h2;
+n2_h1 = h1;
+n2_h2 = h2;
+}
+printf("\n");
+return (0);
 }

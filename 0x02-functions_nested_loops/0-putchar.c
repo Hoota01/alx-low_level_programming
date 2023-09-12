@@ -8,13 +8,14 @@
 int main(void)
 {
 
-	putchar('m');
-	putchar('a');
-	putchar('h');
-	putchar('m');
-	putchar('o');
+	putchar('_');
+	putchar('p');
 	putchar('u');
-	putchar('d');
+	putchar('t');
+	putchar('c');
+	putchar('h');
+	putchar('a');
+	putchar('r');
 	putchar('\n');
-	return 0;
+	return (0);
 	}

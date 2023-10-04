@@ -9,7 +9,7 @@
  * Return: NULL if failure
  */
 char *str_concat(char *s1, char *s2)
-{
+	{
 	char *s;
 	int a, b, c, d;
 
@@ -33,55 +33,4 @@ char *str_concat(char *s1, char *s2)
 			s[c] = s2[d++];
 	}
 	return (s);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                      
+}              

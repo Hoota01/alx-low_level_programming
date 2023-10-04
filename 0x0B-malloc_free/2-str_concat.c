@@ -7,7 +7,7 @@
  * @s1: string 1
  * @s2: string 2
  * Return: NULL if failure
- */
+*/
 char *str_concat(char *s1, char *s2)
 	{
 	char *s;

@@ -3,10 +3,11 @@
 #include <stdlib.h>
 
 /**
- * str_concat - concatenate strings
- * @s1: string 1
- * @s2: string 2
- * Return: NULL if failure
+ * *str_concat - concatenates two strings
+ * @s1: string to concatenate
+ * @s2: other string to concatenate
+ *
+ * Return: pointer to the new string created (Success), or NULL (Error)
  */
 char *str_concat(char *s1, char *s2)
 {

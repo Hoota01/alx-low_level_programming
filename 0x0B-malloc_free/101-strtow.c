@@ -1,36 +1,50 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * number - function to calculate number of words
- * @str: string being passed to check for words
+ * count_word - helper function to count the number of words in a string
+ * @s: string to evaluate
  *
  * Return: number of words
  */
-int number(char *str)
+int count_word(char *s)
 {
-	int a, num = 0;
+	int flag, c, w;
 
-	for (a = 0; str[a] != '\0'; a++)
+	flag = 0;
+	w = 0;
+
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (*str == ' ')
-			str++;
-		else
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
 		{
-			for (; str[a] != ' ' && str[a] != '\0'; a++)
-				str++;
-			num++;
+			flag = 1;
+			w++;
 		}
 	}
-	return (num);
+
+	return (w);
 }
 /**
- * free_everything - frees the memory
- * @string: pointer values being passed for freeing
- * @i: counter
+ * **strtow - splits a string into words
+ * @str: string to split
+ *
+ * Return: pointer to an array of strings (Success)
+ * or NULL (Error)
  */
-void free_everything(char **string, int i)
+char **strtow(char *str)
 {
-	for (; i > 0;)
-		free(string[--i]);
+	char **matrix, *tmp;
+	int i, k = 0, len = 0, words, c = 0, start, end;
+
+	while (*(str + len))
+		len++;
+	words = count_word(str);
+	if (words == 0)
+		return (NULL);
+
+	matrix = (char **) malloc(sizeof(char *) * (words + 1));
+	if (matrix == NULL)
+		return (NULL);

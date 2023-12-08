@@ -8,6 +8,6 @@ for i in range(100, 1000):
         product_str = str(product)
         if product_str == product_str[::-1]and product > largest_palindrome:
             largest_palindrome = product
-            with open("102_result" , "w") as file:
+            with open("102-result" , "w") as file:
                 file.write(str(largest_palindrome))
 
